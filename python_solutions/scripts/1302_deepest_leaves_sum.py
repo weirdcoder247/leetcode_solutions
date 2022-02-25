@@ -1,7 +1,4 @@
 # Definition for a binary tree node.
-from cv2 import TermCriteria_COUNT
-
-
 class TreeNode(object):
     def __init__(self, val=0, left=None, right=None):
         self.val = val
