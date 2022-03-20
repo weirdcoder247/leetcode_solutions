@@ -13,11 +13,19 @@ class Solution(object):
             w2 += i
         return w1 == w2
 
+    def arrayStringsAreEqual2(self, word1, word2):
+        """
+        :type word1: List[str]
+        :type word2: List[str]
+        :rtype: bool
+        """
+        return "".join(word1) == "".join(word2)
+
 def main():
     word1 = ["a", "bc"]
     word2 = ["ab", "c"]
     obj = Solution()
-    return obj.arrayStringsAreEqual(word1, word2)
+    return obj.arrayStringsAreEqual2(word1, word2)
 
 if __name__ == "__main__":
     print(main())
