@@ -1,3 +1,2 @@
 C:/Users/dhruv/anaconda3/python.exe
 C:/Users/dhruv/anaconda3/Scripts/conda.exe run -n base --no-capture-output --live-stream python
-------
