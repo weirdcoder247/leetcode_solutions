@@ -21,6 +21,7 @@ class Solution(object):
 def main():
     num = 28
     num = 496
+    # num = 1
     obj = Solution()
     return obj.checkPerfectNumber(num)
 
