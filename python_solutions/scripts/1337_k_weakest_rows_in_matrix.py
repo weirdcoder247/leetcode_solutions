@@ -7,7 +7,9 @@ class Solution(object):
         :type k: int
         :rtype: List[int]
         """
-        mat = ss.rankdata([sum(x) for x in mat])
+        mat = list(ss.rankdata([sum(x) for x in mat]))
+        mat = [[mat[i], i] for i in range(len(mat))]
+        mat.sort()
         return mat
 
 def main():
