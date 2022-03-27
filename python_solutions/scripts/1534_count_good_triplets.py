@@ -7,7 +7,6 @@ class Solution(object):
         :type c: int
         :rtype: int
         """
-        i, j, k = 0, 1, 2
         arr_len = len(arr)
         counter = 0
         for i in range(0, arr_len - 2):
@@ -22,10 +21,10 @@ def main():
     a = 7
     b = 2
     c = 3
-    arr = [1,1,2,2,3]
-    a = 0
-    b = 0
-    c = 1
+    # arr = [1,1,2,2,3]
+    # a = 0
+    # b = 0
+    # c = 1
     obj = Solution()
     return obj.countGoodTriplets(arr, a, b, c)
 
