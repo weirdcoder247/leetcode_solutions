@@ -1,6 +1,6 @@
 # Definition for a binary tree node.
 class TreeNode:
-    def __init__(self, x):
+    def __init__(self, x=0):
         self.val = x
         self.left = None
         self.right = None
@@ -122,12 +122,58 @@ class Solution:
         sumRangeBST(root, low, high)
         return ans[0]
 
+    def convertBST2(self, root):
+        """
+        :type root: TreeNode
+        :rtype: TreeNode
+        """
+        if not root:
+            return root
+        else:
+            def greaterBST(ptr, greater_tree):
+                greaterBSTSum(root, ptr, greater_tree)
+                if ptr.left:
+                    greater_tree.left = TreeNode(0)
+                    greaterBST(ptr.left, greater_tree.left)
+                if ptr.right:
+                    greater_tree.right = TreeNode(0)
+                    greaterBST(ptr.right, greater_tree.right)
+
+            def greaterBSTSum(curr_node, ptr, greater_tree):
+                if curr_node.val >= ptr.val:
+                    greater_tree.val += curr_node.val
+                if curr_node.left:
+                    greaterBSTSum(curr_node.left, ptr, greater_tree)
+                if curr_node.right:
+                    greaterBSTSum(curr_node.right, ptr, greater_tree)
+
+            greater_tree = TreeNode(0)
+            greaterBST(root, greater_tree)
+
+            return greater_tree
+
+    def convertBST(self, root):
+        self.addition = 0
+        def convert(node):
+            if node != None:
+                convert(node.right)
+                self.addition += node.val
+                node.val = self.addition
+                convert(node.left)
+            return node
+        return convert(root)
+
+        
 def main():
     obj = Solution()
     root = '[6,7,8,2,7,1,3,9,null,1,4,null,null,null,5]'
+    root = '[4,1,6,0,2,5,7,null,null,null,3,null,null,null,8]'
     node = obj.stringToTreeNode(root)
-    return obj.rangeSumBST(node, 4, 7)
+    obj.prettyPrintTree(node)
+    node = obj.convertBST(node)
+    obj.prettyPrintTree(node)
+    return node
+
 
 if __name__ == "__main__":
-    print(main())
-
+    main()
