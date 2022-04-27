@@ -86,7 +86,6 @@ class Solution:
         findTN(root)
         return self.target_node
 
-
     def findTargetNode(self, target: int, root: TreeNode) -> TreeNode:
         self.target_node = None
         def findTN(curr_node):
