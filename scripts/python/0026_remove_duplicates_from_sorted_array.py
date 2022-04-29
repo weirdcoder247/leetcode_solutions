@@ -25,10 +25,14 @@ class Solution(object):
         return len(set(nums)), nums
 
 
+def main():
+    # nums = [1,1,2]
+    # nums = [1,1,1,2,2,2]
+    nums = [0,0,1,1,1,2,2,3,3,4]
+    len(set(nums))
+    obj = Solution()
+    return obj.removeDuplicates(nums)
 
-# nums = [1,1,2]
-# nums = [1,1,1,2,2,2]
-nums = [0,0,1,1,1,2,2,3,3,4]
-len(set(nums))
-obj = Solution()
-obj.removeDuplicates(nums)
+if __name__ == "__main__":
+    print(main())
+
