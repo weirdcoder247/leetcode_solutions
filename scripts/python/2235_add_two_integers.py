@@ -3,7 +3,8 @@ class Solution:
         return num1 + num2
 
 def main():
-    num1, num2 = 12, 5
+    num1 = int(input("Enter first integer: "))
+    num2 = int(input("Enter second integer: "))
     obj = Solution()
     return obj.sum(num1, num2)
 
