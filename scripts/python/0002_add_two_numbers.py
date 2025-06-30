@@ -1,9 +1,11 @@
 import json
 
+from typing import Optional
+
 class ListNode(object):
     def __init__(self, x):
         self.val = x
-        self.next = None
+        self.next: Optional['ListNode'] = None
 
 class Solution(object):
     def stringToListNode(self, input, pos=-1):
@@ -18,8 +20,8 @@ class Solution(object):
             counter = -1
             for number in numbers:
                 counter += 1
-                ptr.next = ListNode(number)
                 if ptr is not None:
+                    ptr.next = ListNode(number)
                     ptr = ptr.next
                 if counter == pos:
                     jugaadNode = ptr
