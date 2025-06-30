@@ -184,7 +184,9 @@ class Solution:
                 self.previous_node2.right = curr_node.left
                 self.previous_node.left = None
                 # Recursive Function to replace while loop
-                self.rightEndNode(self.previous_node2.right).right = self.previous_node               
+                right_end = self.rightEndNode(self.previous_node2.right)
+                if right_end is not None:
+                    right_end.right = self.previous_node
                 # Reset curr_node to new_root before recursive call
                 curr_node = self.new_root
             elif curr_node is None:
@@ -195,7 +197,8 @@ class Solution:
             
             return self.new_root
                         
-        return convertToIncBST(root).right
+        result = convertToIncBST(root)
+        return result.right if result is not None else None
 
     def rightEndNode(self, curr_node):
         self.end_node = None
