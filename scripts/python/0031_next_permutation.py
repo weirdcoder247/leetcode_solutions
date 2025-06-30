@@ -6,9 +6,12 @@ class Solution(object):
         """
         
 def main():
-    pass
+    nums = list(map(int, input("Enter numbers separated by spaces: ").split()))
+    obj = Solution()
+    obj.nextPermutation(nums)
+    print(nums)
 
 if __name__ == "__main__":
-    print(main())
+    main()
 
 

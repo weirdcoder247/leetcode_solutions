@@ -11,8 +11,8 @@ class Solution(object):
         return word
 
 def main():
-    word = "abcdefd"
-    ch = "d"
+    word = input("Enter the word: ")
+    ch = input("Enter the character: ")
     obj = Solution()
     return obj.reversePrefix(word, ch)
 

@@ -11,8 +11,7 @@ class Solution(object):
         return ''.join(s)
 
 def main():
-    s = "a1c1e1"
-    s = "a1b2c3d4e"
+    s = input("Enter the string: ")
     obj = Solution()
     return obj.replaceDigits(s)
 

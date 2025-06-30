@@ -17,10 +17,9 @@ class Solution(object):
         return result
 
 def main():
-    bookings = [[1,2,10],[2,3,20],[2,5,25]]
-    n = 5
-    # bookings = [[2,2,30],[2,2,45]]
-    # n = 2
+    import ast
+    bookings = ast.literal_eval(input("Enter bookings as a list of lists: "))
+    n = int(input("Enter n: "))
     obj = Solution()
     return obj.corpFlightBookings(bookings, n)
 

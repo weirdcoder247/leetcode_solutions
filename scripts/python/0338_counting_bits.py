@@ -12,7 +12,7 @@ class Solution(object):
 
 def main():
     obj = Solution()
-    n = 2
+    n = int(input("Enter n: "))
     return obj.countBits(n)
 
 if __name__ == "__main__":

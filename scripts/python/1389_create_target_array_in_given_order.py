@@ -12,8 +12,8 @@ class Solution(object):
 
 def main():
     obj = Solution()
-    nums = [0,1,2,3,4]
-    index = [0,1,2,2,1]
+    nums = list(map(int, input("Enter nums separated by spaces: ").split()))
+    index = list(map(int, input("Enter index separated by spaces: ").split()))
     return obj.createTargetArray(nums, index)
 
 if __name__ == "__main__":

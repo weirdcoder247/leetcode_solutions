@@ -1,3 +1,5 @@
+import ast
+
 class SubrectangleQueries(object):
 
     def __init__(self, rectangle):
@@ -39,24 +41,20 @@ class SubrectangleQueries(object):
         """
         return self.rectangle[row][col]
 
-
+def main():
+    rectangle = ast.literal_eval(input("Enter the rectangle as a 2D list (e.g. [[1,2,3],[4,5,6]]): "))
+    row1 = int(input("Enter row1: "))
+    col1 = int(input("Enter col1: "))
+    row2 = int(input("Enter row2: "))
+    col2 = int(input("Enter col2: "))
+    newValue = int(input("Enter newValue: "))
+    row = int(input("Enter row for getValue: "))
+    col = int(input("Enter col for getValue: "))
+    obj = SubrectangleQueries(rectangle)
+    obj.updateSubrectangle(row1, col1, row2, col2, newValue)
+    print("Updated rectangle:", obj.rectangle)
+    print("Value at (row, col):", obj.getValue(row, col))
 
 # Your SubrectangleQueries object will be instantiated and called as such:
 if __name__ == '__main__':
-    # Test Case
-    row1 = 0
-    col1 = 0
-    row2 = 1
-    col2 = 1
-    newValue = -1
-    row = 0
-    col = 0
-
-    # Define rectangle variable used for initialization of user-defined object
-    rectangle = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
-
-    # Create an object of the new class & call the respective methods with the
-    # test case values
-    obj = SubrectangleQueries(rectangle)
-    obj.updateSubrectangle(row1,col1,row2,col2,newValue)
-    param_2 = obj.getValue(row,col)
+    main()

@@ -11,7 +11,7 @@ class Solution(object):
         return len(set(char_dict.values())) is 1
 
 def main():
-    s = "abacbc"
+    s = input("Enter the string: ")
     obj = Solution()
     return obj.areOccurrencesEqual(s)
 

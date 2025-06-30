@@ -13,8 +13,8 @@ class Solution(object):
 
 
 def main():
-    s = "Hello how are you Contestant"
-    k = 4
+    s = input("Enter the sentence: ")
+    k = int(input("Enter k: "))
     obj = Solution()
     return obj.truncateSentence(s, k)
 

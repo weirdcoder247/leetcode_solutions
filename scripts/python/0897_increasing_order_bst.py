@@ -252,14 +252,11 @@ class Solution:
         
 def main():
     obj = Solution()
-    root = '[6,7,8,2,7,1,3,9,null,1,4,null,null,null,5]'
-    root = '[4,1,6,0,2,5,7,null,null,null,3,null,null,null,8]'
-    root = '[5,3,6,2,4,null,8,1,null,null,null,7,9]'
+    root = input("Enter the binary tree in string format: ")
     root = obj.stringToTreeNode(root)
-    root= obj.increasingBST(root)
+    root = obj.increasingBST(root)
     obj.prettyPrintTree(root)
     return root
-
 
 if __name__ == "__main__":
     main()

@@ -8,8 +8,8 @@ class Solution(object):
         return sum([x in word for x in patterns])
 
 def main():
-    patterns = ["a","abc","bc","d"]
-    word = "abc"
+    patterns = input("Enter patterns separated by spaces: ").split()
+    word = input("Enter the word: ")
     obj = Solution()
     return obj.numOfStrings(patterns, word)
 

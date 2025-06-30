@@ -9,8 +9,8 @@ class Solution(object):
         return sum([pref == w[:len(pref)] for w in words])
 
 def main():
-    words = ["pay","attention","practice","attend"]
-    pref = "at"
+    words = input("Enter words separated by spaces: ").split()
+    pref = input("Enter prefix: ")
     obj = Solution()
     return obj.prefixCount(words, pref)
 

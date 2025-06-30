@@ -34,7 +34,7 @@ class Solution(object):
 
 def main():
     obj = Solution()
-    s = 'LLLRRRLRLLRR'
+    s = input("Enter the string: ")
     return obj.balancedStringSplit(s)
 
 if __name__ == "__main__":

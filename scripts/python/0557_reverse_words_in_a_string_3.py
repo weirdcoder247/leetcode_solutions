@@ -11,7 +11,7 @@ class Solution(object):
         return ans[:-1]
 
 def main():
-    s = "Let's take LeetCode contest"
+    s = input("Enter the sentence: ")
     obj = Solution()
     return obj.reverseWords(s)
 

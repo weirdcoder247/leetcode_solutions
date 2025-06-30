@@ -8,4 +8,5 @@ class Solution(object):
 
 if __name__ == '__main__':
     obj = Solution()
-    obj.buildArray(nums = [2,1,0,4,3])
+    nums = list(map(int, input("Enter numbers separated by spaces: ").split()))
+    obj.buildArray(nums)

@@ -17,10 +17,8 @@ class Solution(object):
         return str_count
 
 def main():
-    allowed = "ab"
-    words = ["ad","bd","aaab","baa","badab"]
-    allowed = "fstqyienx"
-    words = ["n","eeitfns","eqqqsfs","i","feniqis","lhoa","yqyitei","sqtn","kug","z","neqqis"]
+    allowed = input("Enter allowed characters: ")
+    words = input("Enter words separated by spaces: ").split()
     obj = Solution()
     return obj.countConsistentStrings(allowed, words)
 

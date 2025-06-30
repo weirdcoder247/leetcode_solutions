@@ -33,10 +33,8 @@ class Solution(object):
         return city_A[1] + city_B[1]
 
 def main():
-    costs = [[10,20],[30,200],[400,50],[30,20]] # 110
-    costs = [[259,770],[448,54],[926,667],[184,139],[840,118],[577,469]] # 1859
-    costs = [[515,563],[451,713],[537,709],[343,819],[855,779],[457,60],[650,359],[631,42]] # 3086
-    # costs = [[100,10],[100,20],[90,10],[90,20],[110,10],[110,20]]
+    import ast
+    costs = ast.literal_eval(input("Enter costs as a list of lists: "))
     obj = Solution()
     return obj.twoCitySchedCost(costs)
 

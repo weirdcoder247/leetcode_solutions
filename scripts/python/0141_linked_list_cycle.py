@@ -140,18 +140,9 @@ class Solution(object):
 
 
 def main():
-    # obj = Solution()
-    # groupSizes = [3,3,3,3,3,1,3]
-    # return obj.groupThePeople(groupSizes)
-    # obj = Solution()
-    # grid = [[3,0,8,4],[2,4,5,7],[9,2,6,3],[0,3,1,0]]
-    # return obj.maxIncreaseKeepingSkyline(grid)
-    # obj = Solution()
-    # s = 'LLLRRRLRLLRR'
-    # return obj.balancedStringSplit(s)
     obj = Solution()
-    s = "[3,2,0,-4]"
-    pos = 22
+    s = input("Enter the linked list as a JSON array (e.g., [3,2,0,-4]): ")
+    pos = int(input("Enter the position for cycle (-1 for no cycle): "))
     head = obj.stringToListNode(s, pos)
     return obj.hasCycle(head)
 

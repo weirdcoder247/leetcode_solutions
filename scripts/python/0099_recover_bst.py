@@ -3,9 +3,9 @@ from typing import Optional
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, x=0):
-        self.val = x
-        self.left = None
-        self.right = None
+        self.val: int = x
+        self.left: Optional['TreeNode'] = None
+        self.right: Optional['TreeNode'] = None
 
 
 class Solution:
@@ -238,13 +238,10 @@ class Solution:
                 
 def main():
     obj = Solution()
-    root = '[6,7,8,2,7,1,3,9,null,1,4,null,null,null,5]'
-    root = '[4,1,6,0,2,5,7,null,null,null,3,null,null,null,8]'
-    root = '[3,1,4,null,null,2]'
+    root = input("Enter the binary tree in string format (e.g., [1,2,3,null,null,4,5]): ")
     node = obj.stringToTreeNode(root)
     obj.prettyPrintTree(node)
 
-
 if __name__ == "__main__":
-    print(main())
+    main()
 

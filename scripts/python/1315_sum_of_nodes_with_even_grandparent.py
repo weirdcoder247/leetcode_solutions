@@ -104,12 +104,9 @@ class Solution(object):
 
 def main():
     obj = Solution()
-    root = '[6,7,8,2,7,1,3,9,null,1,4,null,null,null,5]'
-    # root = '[1]'
+    root = input("Enter the binary tree in string format: ")
     node = obj.stringToTreeNode(root)
     obj.prettyPrintTree(node)
-    # return obj.deepestLeavesSum(node)
-
     return obj.sumEvenGrandparent(node)
 
 if __name__ == "__main__":

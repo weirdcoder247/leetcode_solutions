@@ -19,5 +19,5 @@ class Solution(object):
 
 if __name__ == '__main__':
     obj = Solution()
-    num = 2932
+    num = int(input("Enter a 4-digit number: "))
     obj.minimumSum(num)

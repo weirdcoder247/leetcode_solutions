@@ -16,8 +16,8 @@ class Solution(object):
         return len(result)
 
 def main():
-    nums = [3,1,4,1,5]
-    k = 2
+    nums = list(map(int, input("Enter numbers separated by spaces: ").split()))
+    k = int(input("Enter k: "))
     obj = Solution()
     print(obj.findPairs(nums, k))
 

@@ -1,9 +1,11 @@
+from typing import Optional
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, x=0):
-        self.val = x
-        self.left = None
-        self.right = None
+        self.val: int = x
+        self.left: Optional['TreeNode'] = None
+        self.right: Optional['TreeNode'] = None
 
 
 class Solution:
@@ -72,9 +74,12 @@ class Solution:
             self.prettyPrintTree(node.left, prefix + ("    " if isLeft else "│   "), True)
 
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
-        return self.findTargetInClone(target, cloned)
+        result = self.findTargetInClone(target, cloned)
+        if result is None:
+            raise ValueError("Target node not found in cloned tree")
+        return result
 
-    def findTargetInClone(self, target: TreeNode, root: TreeNode) -> TreeNode:
+    def findTargetInClone(self, target: TreeNode, root: TreeNode) -> Optional[TreeNode]:
         self.target_node = None
         def findTN(curr_node):
             if target.val == curr_node.val:
@@ -84,6 +89,8 @@ class Solution:
             if curr_node.right:
                 findTN(curr_node.right)
         findTN(root)
+        if self.target_node is None:
+            raise ValueError("Target node not found in tree")
         return self.target_node
 
     def findTargetNode(self, target: int, root: TreeNode) -> TreeNode:
@@ -96,11 +103,13 @@ class Solution:
             if curr_node.right:
                 findTN(curr_node.right)
         findTN(root)
+        if self.target_node is None:
+            raise ValueError("Target node not found in tree")
         return self.target_node
 
 def main():
-    tree = '[7,4,3,null,null,6,19]'
-    target = 3
+    tree = input("Enter the binary tree in string format: ")
+    target = int(input("Enter the target value: "))
     obj = Solution()
     original = obj.stringToTreeNode(tree)
     cloned = obj.stringToTreeNode(tree)

@@ -12,7 +12,7 @@ class Solution(object):
             return "a" * (n - 1) + "b"
 
 def main():
-    n = 4
+    n = int(input("Enter n: "))
     obj = Solution()
     return obj.generateTheString(n)
 

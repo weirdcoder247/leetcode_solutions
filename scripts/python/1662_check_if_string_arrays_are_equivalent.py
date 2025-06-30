@@ -22,8 +22,8 @@ class Solution(object):
         return "".join(word1) == "".join(word2)
 
 def main():
-    word1 = ["a", "bc"]
-    word2 = ["ab", "c"]
+    word1 = input("Enter word1 as space-separated strings: ").split()
+    word2 = input("Enter word2 as space-separated strings: ").split()
     obj = Solution()
     return obj.arrayStringsAreEqual2(word1, word2)
 

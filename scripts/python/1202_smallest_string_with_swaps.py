@@ -17,8 +17,9 @@ class Solution:
 
 
 def main():
-    s = "dcab"
-    pairs = [[0, 3], [1, 2]]
+    s = input("Enter the string: ")
+    import ast
+    pairs = ast.literal_eval(input("Enter pairs as a list of lists: "))
     obj = Solution()
     return obj.smallestStringWithSwaps(s, pairs)
 

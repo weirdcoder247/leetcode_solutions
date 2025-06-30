@@ -24,7 +24,7 @@ class Codec:
 
 def main():
     obj = Codec()
-    url = "https://leetcode.com"
+    url = input("Enter the URL to encode: ")
     print(obj.encode(url))
     return obj.decode(obj.encode(url))
     

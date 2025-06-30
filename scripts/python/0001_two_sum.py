@@ -12,3 +12,11 @@ class Solution(object):
                 if (nums[i] + nums[j]) == target:
                     result = [i,j]
                     return result
+
+def main():
+    nums = list(map(int, input("Enter numbers separated by spaces: ").split()))
+    obj = Solution()
+    print(obj.twoSum(nums, int(input("Enter target: "))))
+
+if __name__ == "__main__":
+    main()

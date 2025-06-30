@@ -13,8 +13,9 @@ class Solution(object):
         return mat
 
 def main():
-    mat = [[1,1,0,0,0], [1,1,1,1,0], [1,0,0,0,0], [1,1,0,0,0], [1,1,1,1,1]]
-    k = 3
+    import ast
+    mat = ast.literal_eval(input("Enter matrix as a list of lists: "))
+    k = int(input("Enter k: "))
     obj = Solution()
     return obj.kWeakestRows(mat, k)
 

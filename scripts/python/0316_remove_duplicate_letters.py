@@ -12,7 +12,7 @@ class Solution(object):
         return ans
 
 def main():
-    s = "bcabc"
+    s = input("Enter the string: ")
     obj = Solution()
     return obj.removeDuplicateLetters(s)
 

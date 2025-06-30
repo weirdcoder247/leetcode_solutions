@@ -24,7 +24,7 @@ class Solution(object):
 
 def main():
     obj = Solution()
-    command = 'G()(al)()()()()GGGGGGGG'
+    command = input("Enter the command string: ")
     return obj.interpret(command)
 
 if __name__ == "__main__":

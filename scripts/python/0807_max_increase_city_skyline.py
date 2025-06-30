@@ -1,10 +1,12 @@
+import numpy as np
+
+
 class Solution(object):
     def maxIncreaseKeepingSkyline(self, grid):
         """
         :type grid: List[List[int]]
         :rtype: int
         """
-        import numpy as np
         arr = np.array(grid)
         row_max = arr.max(axis=1)
         col_max = arr.max(axis=0)
@@ -19,10 +21,11 @@ class Solution(object):
 
 
 def main():
+    import ast
+    grid = ast.literal_eval(input("Enter grid as a list of lists: "))
     obj = Solution()
-    grid = [[3,0,8,4],[2,4,5,7],[9,2,6,3],[0,3,1,0]]
-
     return obj.maxIncreaseKeepingSkyline(grid)
+
 
 if __name__ == "__main__":
     print(main())

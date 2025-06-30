@@ -8,9 +8,9 @@ class Solution(object):
         sdn_list = []
         for i in range(left, right + 1):
             digits = [int(x) for x in list(str(i))]
+            flag = True
             for j in digits:
-                flag = True
-                if j is 0 or i % j != 0:
+                if j == 0 or i % j != 0:
                     flag = False
                     break
             if flag:
@@ -19,10 +19,8 @@ class Solution(object):
 
 
 def main():
-    left = 1
-    right = 22
-    left = 47
-    right = 85
+    left = int(input("Enter left: "))
+    right = int(input("Enter right: "))
     obj = Solution()
     return obj.selfDividingNumbers(left, right)
 

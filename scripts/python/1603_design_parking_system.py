@@ -35,11 +35,12 @@ class ParkingSystem(object):
 
 
 if __name__ == '__main__':
-    small = 1
-    medium = 1
-    big = 1
+    small = int(input("Enter number of small slots: "))
+    medium = int(input("Enter number of medium slots: "))
+    big = int(input("Enter number of big slots: "))
     obj = ParkingSystem(big, medium, small)
-    obj.addCar(carType=1)
+    carType = int(input("Enter carType (1=big, 2=medium, 3=small): "))
+    obj.addCar(carType=carType)
 
 
 # Your ParkingSystem object will be instantiated and called as such:

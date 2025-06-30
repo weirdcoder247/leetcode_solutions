@@ -11,8 +11,7 @@ class Solution(object):
 
 def main():
     obj = Solution()
-    boxes = '110'
-
+    boxes = input("Enter boxes as a string of 0s and 1s: ")
     return obj.minOperations(boxes)
 
 if __name__ == "__main__":

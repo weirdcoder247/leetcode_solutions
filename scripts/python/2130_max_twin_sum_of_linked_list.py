@@ -68,7 +68,7 @@ class Solution(object):
 
 
 def main():
-    head = '[5,4,2,1]'
+    head = input("Enter the linked list as a JSON array (e.g., [5,4,2,1]): ")
     obj = Solution()
     head = obj.stringToListNode(head)
     obj.prettyPrintLinkedList(head)

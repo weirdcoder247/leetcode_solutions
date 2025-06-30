@@ -15,5 +15,5 @@ class Solution(object):
 
 if __name__ == '__main__':
     obj = Solution()
-    num = 57
+    num = int(input("Enter the number: "))
     obj.numberOfSteps(num)

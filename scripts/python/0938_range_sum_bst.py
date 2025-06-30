@@ -1,9 +1,11 @@
 # Definition for a binary tree node.
+from typing import Optional
+
 class TreeNode:
-    def __init__(self, x):
-        self.val = x
-        self.left = None
-        self.right = None
+    def __init__(self, x: int):
+        self.val: int = x
+        self.left: Optional['TreeNode'] = None
+        self.right: Optional['TreeNode'] = None
 
 
 class Solution:
@@ -124,9 +126,11 @@ class Solution:
 
 def main():
     obj = Solution()
-    root = '[6,7,8,2,7,1,3,9,null,1,4,null,null,null,5]'
-    node = obj.stringToTreeNode(root)
-    return obj.rangeSumBST(node, 4, 7)
+    root_str = input("Enter the binary tree in string format: ")
+    low = int(input("Enter the low value: "))
+    high = int(input("Enter the high value: "))
+    node = obj.stringToTreeNode(root_str)
+    return obj.rangeSumBST(node, low, high)
 
 if __name__ == "__main__":
     print(main())

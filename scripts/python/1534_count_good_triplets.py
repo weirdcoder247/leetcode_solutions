@@ -20,16 +20,12 @@ class Solution(object):
 
 
 def main():
-    arr = [3, 0, 1, 1, 9, 7]
-    a = 7
-    b = 2
-    c = 3
-    # arr = [1, 1, 2, 2, 3]
-    # a = 0
-    # b = 0
-    # c = 1
+    arr = list(map(int, input("Enter the array (space-separated): ").split()))
+    a = int(input("Enter a: "))
+    b = int(input("Enter b: "))
+    c = int(input("Enter c: "))
     obj = Solution()
-    return obj.countGoodTriplets(arr, a, b, c)
+    print(obj.countGoodTriplets(arr, a, b, c))
 
 if __name__ == '__main__':
-    print(main())
+    main()

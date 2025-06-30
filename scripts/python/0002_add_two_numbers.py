@@ -1,3 +1,5 @@
+import json
+
 class ListNode(object):
     def __init__(self, x):
         self.val = x
@@ -6,22 +8,23 @@ class ListNode(object):
 class Solution(object):
     def stringToListNode(self, input, pos=-1):
         # Generate list from the input
-        import json
         numbers = json.loads(input)
 
         # Now convert that list into linked list
         dummyRoot = ListNode(0)
         ptr = dummyRoot
         if 0 <= pos <= len(numbers) - 1:
-            jugaadNode = ListNode()
+            jugaadNode = ListNode(0)
             counter = -1
             for number in numbers:
                 counter += 1
                 ptr.next = ListNode(number)
-                ptr = ptr.next
+                if ptr is not None:
+                    ptr = ptr.next
                 if counter == pos:
                     jugaadNode = ptr
-            ptr.next = jugaadNode
+            if ptr is not None:
+                ptr.next = jugaadNode
             ptr = dummyRoot.next
             return ptr
         else:
@@ -76,9 +79,12 @@ class Solution(object):
 
 def main():
     obj = Solution()
-    l1 = obj.stringToListNode("[9,9,9,9,9,9,9]")
-    l2 = obj.stringToListNode("[9,9,9,9]")
-    return obj.addTwoNumbers(l1, l2)
+    l1_str = input("Enter the first linked list as a JSON array (e.g., [2,4,3]): ")
+    l2_str = input("Enter the second linked list as a JSON array (e.g., [5,6,4]): ")
+    l1 = obj.stringToListNode(l1_str)
+    l2 = obj.stringToListNode(l2_str)
+    result = obj.addTwoNumbers(l1, l2)
+    obj.prettyPrintLinkedList(result)
 
 if __name__ == "__main__":
-    print(main())
+    main()

@@ -1,3 +1,5 @@
+from math import log, floor
+
 class Solution(object):
     def isPowerOfTwo(self, n):
         """
@@ -11,3 +13,11 @@ class Solution(object):
             return True
         else:
             return False
+
+def main():
+    n = int(input("Enter an integer: "))
+    obj = Solution()
+    print(obj.isPowerOfTwo(n))
+
+if __name__ == "__main__":
+    main()

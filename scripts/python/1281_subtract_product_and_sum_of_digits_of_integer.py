@@ -10,8 +10,10 @@ class Solution(object):
             prod *= i
         return prod - sum(n)
 
+def main():
+    obj = Solution()
+    n = int(input("Enter the number: "))
+    print(obj.subtractProductAndSum(n))
 
 if __name__ == '__main__':
-    obj = Solution()
-    n = 10
-    obj.subtractProductAndSum(n)
+    main()

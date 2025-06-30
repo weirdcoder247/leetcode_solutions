@@ -8,6 +8,6 @@ class Solution(object):
 
 
 if __name__ == '__main__':
-    n = "282"
+    n = input("Enter the number as a string: ")
     obj = Solution()
     obj.minPartitions(n)

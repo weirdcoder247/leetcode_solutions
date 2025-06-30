@@ -7,16 +7,8 @@ class Solution(object):
       return res + X - Y
 
 def main():
-    startValue = 2
-    target = 3
-    startValue = 5
-    target = 8
-    startValue = 3
-    target = 10
-    startValue = 1
-    target = 1000000000
-    startValue = 1000000000
-    target = 1
+    startValue = int(input("Enter startValue: "))
+    target = int(input("Enter target: "))
     obj = Solution()
     return obj.brokenCalc(startValue, target)
 

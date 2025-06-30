@@ -13,7 +13,8 @@ class Solution(object):
         return min_moves
 
 def main():
-    seats, students = [2,2,6,6], [1,3,2,6]
+    seats = list(map(int, input("Enter seats separated by spaces: ").split()))
+    students = list(map(int, input("Enter students separated by spaces: ").split()))
     obj = Solution()
     return obj.minMovesToSeat(seats, students)
 

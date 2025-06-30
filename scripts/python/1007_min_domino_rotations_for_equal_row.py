@@ -39,12 +39,8 @@ class Solution(object):
                 print(first, second)
 
 def main():
-    # tops = [3,5,1,2,3]
-    # bottoms = [3,6,3,3,4]
-    # tops = [2,1,2,4,2,2]
-    # bottoms = [5,2,6,2,3,2]
-    tops = [1,2,1,1,1,2,2,2]
-    bottoms = [2,1,2,2,2,2,2,2]
+    tops = list(map(int, input("Enter tops separated by spaces: ").split()))
+    bottoms = list(map(int, input("Enter bottoms separated by spaces: ").split()))
     obj = Solution()
     return obj.minDominoRotations(tops, bottoms)
 

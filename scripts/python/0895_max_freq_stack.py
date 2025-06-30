@@ -41,16 +41,13 @@ class FreqStack(object):
 
 def main():
     obj = FreqStack()
-    obj.push(5)
-    obj.push(7)
-    obj.push(5)
-    obj.push(7)
-    obj.push(4)
-    obj.push(5)
-    print(obj.pop())
-    print(obj.pop())
-    print(obj.pop())
-    print(obj.pop())
+    n = int(input("Enter number of operations: "))
+    for _ in range(n):
+        op = input("Enter operation (push <val>/pop): ").strip().split()
+        if op[0] == "push":
+            obj.push(int(op[1]))
+        elif op[0] == "pop":
+            print(obj.pop())
 
 
 if __name__ == '__main__':

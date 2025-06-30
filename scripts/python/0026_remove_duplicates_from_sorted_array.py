@@ -26,13 +26,10 @@ class Solution(object):
 
 
 def main():
-    # nums = [1,1,2]
-    # nums = [1,1,1,2,2,2]
-    nums = [0,0,1,1,1,2,2,3,3,4]
-    len(set(nums))
+    nums = list(map(int, input("Enter numbers separated by spaces: ").split()))
     obj = Solution()
-    return obj.removeDuplicates(nums)
+    print(obj.removeDuplicates(nums))
 
 if __name__ == "__main__":
-    print(main())
+    main()
 

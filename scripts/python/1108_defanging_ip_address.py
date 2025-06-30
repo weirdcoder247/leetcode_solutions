@@ -7,6 +7,6 @@ class Solution(object):
         return address.replace(".", "[.]")
 
 if __name__ == '__main__':
-    address = "0.0.0.0"
+    address = input("Enter the IP address: ")
     obj = Solution()
-    obj.defangIPaddr(address)
+    print(obj.defangIPaddr(address))

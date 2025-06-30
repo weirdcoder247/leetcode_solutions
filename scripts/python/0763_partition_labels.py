@@ -21,9 +21,7 @@ class Solution(object):
 
 
 def main():
-    s = "ababcbacadefegdehijhklij"
-    s = "caedbdedda"
-    # s = "aebbedaddc"
+    s = input("Enter the string: ")
     obj = Solution()
     return obj.partitionLabels(s)
 

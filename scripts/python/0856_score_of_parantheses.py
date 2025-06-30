@@ -34,9 +34,7 @@ class Solution(object):
         return score + temp * mult
 
 def main():
-    s = "(((())))"
-    s = "()()(())()"
-    s = "(()(()))"
+    s = input("Enter the parentheses string: ")
     obj = Solution()
     return obj.scoreOfParentheses(s)
 

@@ -14,8 +14,8 @@ class Solution(object):
         return ans
 
 def main():
-    nums = [1,2,2,1]
-    k = 0
+    nums = list(map(int, input("Enter numbers separated by spaces: ").split()))
+    k = int(input("Enter k: "))
     obj = Solution()
     print(obj.countKDifference(nums, k))
 

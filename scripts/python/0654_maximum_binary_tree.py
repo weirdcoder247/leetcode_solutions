@@ -4,8 +4,8 @@ from typing import List, Optional
 class TreeNode:
     def __init__(self, x=0):
         self.val = x
-        self.left = None
-        self.right = None
+        self.left: Optional['TreeNode'] = None
+        self.right: Optional['TreeNode'] = None
 
 
 class Solution:
@@ -102,8 +102,7 @@ class Solution:
 
 def main():
     obj = Solution()
-    nums = [3,2,1,6,0,5]
-    nums = [3,2,1]
+    nums = list(map(int, input("Enter numbers separated by spaces: ").split()))
     return obj.constructMaximumBinaryTree(nums)
     
 

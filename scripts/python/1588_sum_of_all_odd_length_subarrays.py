@@ -17,9 +17,7 @@ class Solution(object):
 
 
 def main():
-    arr = [1,4,2,5,3]
-    # arr = [10,11,12]
-    # arr = [1,2]
+    arr = list(map(int, input("Enter array elements separated by spaces: ").split()))
     obj = Solution()
     return obj.sumOddLengthSubarrays(arr)
 

@@ -28,8 +28,7 @@ class Solution(object):
 
 def main():
     obj = Solution()
-    groupSizes = [3,3,3,3,3,1,3]
-
+    groupSizes = list(map(int, input("Enter group sizes separated by spaces: ").split()))
     return obj.groupThePeople(groupSizes)
 
 if __name__ == "__main__":

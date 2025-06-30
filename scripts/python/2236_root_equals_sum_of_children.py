@@ -77,8 +77,8 @@ class Solution:
 
 def main():
     obj = Solution()
-    root = '[10,4,6]'
-    root = obj.stringToTreeNode(root)
+    root_str = input("Enter the binary tree in string format: ")
+    root = obj.stringToTreeNode(root_str)
     return obj.checkTree(root)
 
 if __name__ == "__main__":

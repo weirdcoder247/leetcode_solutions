@@ -1,3 +1,6 @@
+from collections import Counter
+
+
 class Solution(object):
     def removeDuplicates(self, nums):
         """
@@ -11,7 +14,6 @@ class Solution(object):
         # jugaad
         jugaad_flag = False
         jugaad_flag_2 = False
-        from collections import Counter
         if Counter(nums)[max(nums)] == 1:
             jugaad_flag = True
         else:
@@ -81,20 +83,10 @@ class Solution(object):
 
 
 
-nums = [1,1,2] # correct
-nums = [1,1,1,2,2,2] # correct
-nums = [0,0,1,1,1,2,2,3,3,4] # correct
-nums = [0,0,1,1,1,2,2,3,3,3] # correct
-nums = [0,0,1,1,1,1,2,3,3] # correct
-nums = [1,1,1,2,2,3] # correct
-nums = [1,1]
-nums = [1,1,1]
-nums = [1,2,2]
-nums = [0,0,1,1,1,1,2,3,3]
-nums = [1,2,2,2]
-nums = [1,1,1,1,2,2,3]
-nums = [0,0,0,0,3]
-nums = [-50,-50,-49,-49,-48,-48,-48,-48,-47,-46,-46,-46,-45,-44,-44,-43,-43,-43,-42,-41,-39,-39,-38,-37,-37,-36,-35,-34,-33,-33,-33,-32,-30,-29,-29,-29,-28,-27,-26,-26,-25,-25,-25,-25,-25,-24,-23,-23,-22,-22,-22,-21,-21,-20,-18,-16,-15,-15,-14,-13,-12,-11,-10,-10,-10,-9,-7,-7,-7,-7,-7,-6,-5,-5,-5,-5,-4,-4,-2,-2,0,0,2,2,2,3,3,4,5,5,7,7,8,8,9,9,10,10,11,11,12,12,12,13,13,14,14,14,14,14,15,16,16,16,16,16,17,17,18,19,19,20,20,20,21,21,22,23,26,26,26,27,27,28,28,28,28,29,29,30,30,31,32,33,34,35,36,36,37,37,38,38,38,38,39,40,40,41,41,41,41,42,42,43,43,43,43,43,44,45,45,45,46,46,47,47,47,48,48,49,50]
+def main():
+    nums = list(map(int, input("Enter numbers separated by spaces: ").split()))
+    obj = Solution()
+    print(obj.removeDuplicates(nums))
 
-obj = Solution()
-obj.removeDuplicates(nums)
+if __name__ == "__main__":
+    main()

@@ -7,6 +7,6 @@ class Solution(object):
         return max([len(x) for x in [x.split() for x in sentences]])
 
 if __name__ == '__main__':
-    sentences = ["abc abc", "This is a very big sentence"]
+    sentences = input("Enter sentences separated by ';': ").split(';')
     obj = Solution()
     obj.mostWordsFound(sentences)

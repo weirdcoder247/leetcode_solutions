@@ -16,9 +16,10 @@ class Solution(object):
 
 def main():
     obj = Solution()
-    items = [["phone","blue","pixel"],["computer","silver","lenovo"],["phone","gold","iphone"]]
-    ruleKey = "color"
-    ruleValue = "silver"
+    import ast
+    items = ast.literal_eval(input("Enter items as a list of lists: "))
+    ruleKey = input("Enter ruleKey (type/color/name): ")
+    ruleValue = input("Enter ruleValue: ")
     return obj.countMatches(items, ruleKey, ruleValue)
 
 if __name__ == '__main__':

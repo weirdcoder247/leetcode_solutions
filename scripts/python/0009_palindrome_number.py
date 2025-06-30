@@ -14,7 +14,6 @@ class Solution(object):
             return False
         else:
             y = reverse(str(x))
-            print(type(y))
             if y[-1] != '-':
                 if int(y) == x:
                     return True
@@ -22,3 +21,11 @@ class Solution(object):
                     return False
             else:
                 return False
+
+def main():
+    x = int(input("Enter an integer: "))
+    obj = Solution()
+    print(obj.isPalindrome(x))
+
+if __name__ == "__main__":
+    main()

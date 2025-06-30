@@ -8,7 +8,7 @@ class Solution(object):
         return nums[-1] * nums[-2] -nums[0] * nums[1]
 
 def main():
-    nums = [5,6,2,7,4]
+    nums = list(map(int, input("Enter numbers separated by spaces: ").split()))
     obj = Solution()
     return obj.maxProductDifference(nums)
 

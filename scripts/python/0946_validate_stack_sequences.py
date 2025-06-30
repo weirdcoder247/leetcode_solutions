@@ -19,3 +19,12 @@ class Solution(object):
         else:
             return False
 
+def main():
+    pushed = list(map(int, input("Enter pushed sequence separated by spaces: ").split()))
+    popped = list(map(int, input("Enter popped sequence separated by spaces: ").split()))
+    obj = Solution()
+    print(obj.validateStackSequences(pushed, popped))
+
+if __name__ == "__main__":
+    main()
+

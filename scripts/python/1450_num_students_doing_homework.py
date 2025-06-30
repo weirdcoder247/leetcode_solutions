@@ -13,9 +13,9 @@ class Solution(object):
         return student_count
 
 def main():
-    startTime = [1, 2, 3]
-    endTime = [3, 2, 7]
-    queryTime = 4
+    startTime = list(map(int, input("Enter start times separated by spaces: ").split()))
+    endTime = list(map(int, input("Enter end times separated by spaces: ").split()))
+    queryTime = int(input("Enter query time: "))
     obj = Solution()
     return obj.busyStudent(startTime, endTime, queryTime)
 

@@ -11,6 +11,6 @@ class Solution(object):
 
 if __name__ == '__main__':
     obj = Solution()
-    encoded = [6, 2, 7, 3]
-    first = 4
+    encoded = list(map(int, input("Enter encoded array separated by spaces: ").split()))
+    first = int(input("Enter first: "))
     obj.decode(encoded, first)

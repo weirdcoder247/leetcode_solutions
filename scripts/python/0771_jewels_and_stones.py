@@ -20,6 +20,6 @@ class Solution(object):
 
 if __name__ == '__main__':
     obj = Solution()
-    jewels = "aA"
-    stones = "aaaaAAAddsdsds"
+    jewels = input("Enter jewels: ")
+    stones = input("Enter stones: ")
     obj.numJewelsInStones(jewels, stones)

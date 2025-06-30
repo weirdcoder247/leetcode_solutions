@@ -16,7 +16,7 @@ class Solution(object):
 
 def main():
     obj = Solution()
-    s = "is2 sentence4 this1 a3"
+    s = input("Enter the sentence to sort: ")
     return obj.sortSentence(s)
 
 

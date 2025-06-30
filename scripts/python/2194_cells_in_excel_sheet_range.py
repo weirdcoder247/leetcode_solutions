@@ -13,7 +13,7 @@ class Solution(object):
 
 def main():
     obj = Solution()
-    s = "A10:B12"
+    s = input("Enter the Excel range (e.g., A1:B2): ")
     return obj.cellsInRange(s)
 
 if __name__ == "__main__":

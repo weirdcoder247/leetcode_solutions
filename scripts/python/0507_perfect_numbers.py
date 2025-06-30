@@ -19,9 +19,7 @@ class Solution(object):
         return num == sum(set(divs))
 
 def main():
-    num = 28
-    num = 496
-    # num = 1
+    num = int(input("Enter a number: "))
     obj = Solution()
     return obj.checkPerfectNumber(num)
 

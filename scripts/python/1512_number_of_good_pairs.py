@@ -13,6 +13,6 @@ class Solution(object):
 
 
 if __name__ == '__main__':
-    nums = [1, 1, 1, 1]
+    nums = list(map(int, input("Enter numbers separated by spaces: ").split()))
     obj = Solution()
     obj.numIdenticalPairs(nums)

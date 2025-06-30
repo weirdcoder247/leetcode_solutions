@@ -16,9 +16,6 @@ class Solution(object):
 
 if __name__ == '__main__':
     obj = Solution()
-    s = 'codeleet'
-    indices = [4, 5, 6, 7, 0, 2, 1, 3]
-    # indices = [4, 5, 6, 7, 0, 1, 2, 3]
-    # s = 'abc'
-    # indices = [0, 1, 2]
+    s = input("Enter the string: ")
+    indices = list(map(int, input("Enter indices separated by spaces: ").split()))
     obj.restoreString(s, indices)

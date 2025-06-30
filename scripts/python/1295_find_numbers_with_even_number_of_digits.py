@@ -7,7 +7,7 @@ class Solution(object):
         return sum([len(str(x)) % 2 == 0 for x in nums])
 
 def main():
-    nums = [12,1,2,445,1290]
+    nums = list(map(int, input("Enter numbers separated by spaces: ").split()))
     obj = Solution()
     return obj.findNumbers(nums)
 

@@ -3,9 +3,9 @@ from typing import List, Optional
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, x=0):
-        self.val = x
-        self.left = None
-        self.right = None
+        self.val: int = x
+        self.left: Optional['TreeNode'] = None
+        self.right: Optional['TreeNode'] = None
 
 
 class Solution:
@@ -90,7 +90,7 @@ class Solution:
             
 
 def main():
-    root = '[4,2,7,1,3,6,9]'
+    root = input("Enter the binary tree in string format: ")
     obj = Solution()
     if root == '[]':
         return '[]'

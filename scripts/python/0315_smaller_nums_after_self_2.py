@@ -22,3 +22,11 @@ class Solution(object):
 
         mergesort(0,len(nums)-1) if nums else None
         return res[::-1]
+
+def main():
+    nums = list(map(int, input("Enter numbers separated by spaces: ").split()))
+    obj = Solution()
+    print(obj.countSmaller(nums))
+
+if __name__ == "__main__":
+    main()

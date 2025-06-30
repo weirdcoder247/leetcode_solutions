@@ -10,6 +10,6 @@ class Solution(object):
 
 
 if __name__ == '__main__':
-    nums = [1, 2, 3]
+    nums = list(map(int, input("Enter numbers separated by spaces: ").split()))
     obj = Solution()
     obj.runningSum(nums)

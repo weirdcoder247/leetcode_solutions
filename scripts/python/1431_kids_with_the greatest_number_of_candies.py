@@ -11,7 +11,7 @@ class Solution(object):
 
 
 if __name__ == '__main__':
-    candies = [2,3,5,1,3]
-    extraCandies = 3
+    candies = list(map(int, input("Enter candies separated by spaces: ").split()))
+    extraCandies = int(input("Enter extraCandies: "))
     obj = Solution()
     obj.kidsWithCandies(candies, extraCandies)

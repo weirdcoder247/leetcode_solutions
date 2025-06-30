@@ -12,3 +12,11 @@ class Solution(object):
             elif c == "(": stack.append(i)
         for i in stack: S[i] = ""
         return "".join(S)
+
+def main():
+    S = input("Enter the string: ")
+    obj = Solution()
+    print(obj.minRemoveToMakeValid(S))
+
+if __name__ == "__main__":
+    main()

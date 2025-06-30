@@ -27,9 +27,9 @@ class Solution(object):
 
 
 def main():
-    s = "(){}[]("
+    s = input("Enter the parentheses string: ")
     obj = Solution()
-    return obj.isValid(s)
+    print(obj.isValid(s))
 
 if __name__ == "__main__":
-    print(main())
+    main()

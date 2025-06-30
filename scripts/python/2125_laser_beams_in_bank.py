@@ -30,7 +30,7 @@ class Solution(object):
 
 
 def main():
-    bank = ["011001","000000","010100","001000"]
+    bank = input("Enter bank rows separated by spaces (e.g., 011001 000000 010100 001000): ").split()
     obj = Solution()
     return obj.numberOfBeams(bank)
 
